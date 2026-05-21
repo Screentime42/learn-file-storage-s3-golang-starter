@@ -102,7 +102,7 @@ func (cfg *apiConfig) handlerUploadThumbnail(w http.ResponseWriter, r *http.Requ
 	}
 
 	// Update metadata
-	thumbnailURL := "/assets/" + fileName
+	thumbnailURL := "http://localhost:" + cfg.port + "/assets/" + fileName
 	video.ThumbnailURL = &thumbnailURL
 
 	// Save to db
